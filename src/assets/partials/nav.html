@@ -1,0 +1,25 @@
+<nav class="nav nav--desktop">
+    <div class="nav__container container">
+        @@include('./components/logo.html', {
+            'classname': 'logo--nav'
+        })
+        @@include('./components/nav-menu-items.html')
+        @@include('./components/socials.html')
+    </div>
+</nav>
+<nav class="nav nav--mobile">
+    <div class="nav__container container">
+        @@include('./components/logo.html', {
+            'classname': 'logo--nav'
+        })
+        <div class="nav__hamburger-btn">
+            <div class="nav__hamburger"> </div>
+        </div>
+    </div>
+
+    <div class="nav__container nav__container--menu-items container">
+        @@include('./components/nav-menu-items.html')
+        @@include('./components/socials.html')
+    </div>
+
+</nav>

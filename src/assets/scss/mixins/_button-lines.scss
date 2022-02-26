@@ -1,0 +1,104 @@
+@mixin button-lines() {
+    $root: &;
+  
+    margin: 0 auto;
+    border: 2px solid $coral;
+    padding: 10px 20px;
+    cursor: pointer;
+    @include p();
+    color: $black;
+    outline: none;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.8s ease;
+    transition: all 0.3s;
+    background: transparent;
+    text-decoration: none;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      border-top: 2px solid $coral;
+      border-bottom: 2px solid $coral;
+      top: -2px;
+      left: -20px;
+      right: 0;
+      bottom: -2px;
+      width: 100%;
+      padding: 2px 20px;
+      transition: transform 0.8s ease;
+    }
+  
+    &::after {
+      content: "";
+      position: absolute;
+      border-left: 2px solid $coral;
+      border-right: 2px solid $coral;
+      top: -20px;
+      left: -2px;
+      right: 0;
+      bottom: -20px;
+      width: 100%;
+      padding: 20px 0;
+      transition: transform 0.8s ease;
+    }
+  
+    &:hover {
+  
+      background-color: $salmon;
+      color: $white;
+      transition: all 0.3s;
+  
+      #{$root}__horizontal {
+        // opacity: 0;
+        transition: transform 0.8s ease;
+        transform: scaleY(0);
+      }
+  
+      &::before {
+          transition: transform 0.8s ease;
+          transform: scaleX(0);
+      }
+  
+      #{$root}__vertical {
+        // opacity: 0;
+        transition: transform 0.8s ease;
+        transform: scaleX(0);
+      }
+  
+      &::after {
+          transition: transform 0.8s ease;
+          transform: scaleY(0);
+      }
+    }
+  
+    &__horizontal {
+      border-left: 2px solid $coral;
+      border-right: 2px solid $coral;
+      height: 100%;
+      width: 100%;
+      padding: 2px 20px;
+      position: absolute;
+      top: -2px;
+      left: -22px;
+      right: 0;
+      bottom: 0;
+      opacity: 1;
+      transition: transform 0.8s ease;
+    }
+  
+    &__vertical {
+      border-top: 2px solid $coral;
+      border-bottom: 2px solid $coral;
+      height: 100%;
+      width: 100%;
+      padding: 20px 2px;
+      position: absolute;
+      top: -22px;
+      left: -2px;
+      right: 0;
+      bottom: 0;
+      opacity: 1;
+      transition: transform 0.8s ease;
+    }
+}

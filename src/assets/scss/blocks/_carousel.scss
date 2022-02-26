@@ -1,0 +1,57 @@
+.carousel {
+    $root: &;
+    $item: #{$root}__item;
+
+    @include container();
+
+    &__slides {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 50px;
+        overflow: hidden;
+        @include p();
+    }
+
+    &__item {
+        max-width: 150px;
+        min-width: 100px;
+        width: 30%;
+        padding: 100px;
+        background: $salmon;
+        text-align: center;
+        margin-right: 20px;
+        transition: .2s;
+
+        &--selected {
+            background: $coral;
+        }
+    }
+
+    &__nav {
+        text-align: center;
+    }
+
+    &__button {
+        background: $salmon;
+        border-radius: 50px;
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        cursor: pointer;
+        transition: .2s;
+
+        &:not(:last-of-type) {
+            margin-right: 10px;
+        }
+
+        &:hover {
+            background: $coral;
+        }
+
+        &--selected {
+            background: $coral;
+        }
+
+    }
+}

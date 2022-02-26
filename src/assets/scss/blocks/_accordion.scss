@@ -1,0 +1,99 @@
+.accordion {
+    $root: &;
+    $box: #{$root}__box;
+    $active: #{$box}--active;
+
+    @include container();
+
+    &__box {
+        position: relative;
+        margin: 10px 0;
+        background: $primary;
+
+        &--active {
+            
+        }
+
+    }
+
+    &__label {
+        background: $primary;
+        padding: 10px;
+        cursor: pointer;
+        transition: .2s;
+        position: relative;
+        margin: 0;
+        @include p();
+        color: $black;
+
+        &:hover {
+            background: $secondary;
+            color: $white;
+            transition: .2s;
+
+            &::before,
+            &::after {
+                background: $white;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translatey(-50%);
+            font-size: 1.5em;
+
+            width: 10px;
+            height: 2px;
+            background: $black;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 24px;
+            transform: translatey(-50%);
+            font-size: 1.5em;
+
+            width: 2px;
+            height: 10px;
+            background: $black;
+        }
+
+        #{$active} & {
+            background: $secondary;
+            color: $white;
+            
+            &::before {
+                content: '';
+                width: 10px;
+                height: 2px;
+                background: $white;
+
+            }
+
+            &::after {
+                display: none;
+
+            }
+        }
+    }
+
+    &__content {
+        height: 0;
+        overflow: hidden; 
+        transition: 0.5s;
+        //overflow-y: auto;
+        padding: 0 10px;
+        @include p();
+
+        #{$active} & {
+         height: 150px;   
+         padding: 10px;
+        }
+
+    }
+}

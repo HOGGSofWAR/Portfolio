@@ -1,0 +1,32 @@
+@mixin button() {
+
+    border: 1px solid $buttonbg;
+    background: $buttonbg;
+    line-height: 40px;
+    font-size: 12px;
+    font-family: arial;
+    font-weight: $f-bold;
+    display: inline-block;
+    color: $buttoncolor;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s;
+    
+    &:hover {
+        border: 1px solid $buttonbghover;
+        background: $buttonbghover;
+    }
+    
+    @media (min-width: 599px) {
+        min-width: 230px;
+    }
+    
+    @media (max-width: 600px) {
+        width: 100%;
+        padding: 0;
+    }
+    
+}

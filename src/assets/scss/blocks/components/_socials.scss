@@ -1,0 +1,38 @@
+.socials {
+    display: flex;
+    padding-left: 0;
+
+    @media (max-width: 1025px) {
+        width: 100%;
+    }
+
+    &__item {
+        height: 20px;
+        width: 20px;
+        list-style-type: none;
+
+        &:not(:last-of-type) {
+            margin-right: 10px;
+        }
+
+        a {
+            display: inline-block;
+        }
+
+        img {
+            height: 20px;
+            width: 20px;
+        }
+
+        svg {
+            height: 20px;
+            width: 20px;
+            fill: $white;
+            transition: .5s;
+
+            &:hover {
+                fill: $teal;
+            }
+        }
+    }
+}

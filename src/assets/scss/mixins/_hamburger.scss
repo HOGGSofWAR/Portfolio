@@ -1,0 +1,68 @@
+@mixin hamburger() {
+    $root: &;
+    $hambtn: #{$root}__hamburger-btn;
+    $active: #{$hambtn}--active;
+    $hamburger: #{$root}__hamburger;
+
+    &__hamburger-btn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        border: 3px solid white;
+
+
+        //animation
+        &--active {
+
+        }
+
+    }
+
+    &__hamburger {
+        width: 50px;
+        height: 6px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+        transition: all 0.5s ease-in-out;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 6px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+            transition: all 0.5s ease-in-out;
+        }
+
+        &::before {
+            transform: translatey(-16px);
+        }
+
+        &::after {
+            transform: translatey(16px);
+        }
+
+        #{$active} & {
+            transform: translate(-50px);
+            background: transparent;
+            box-shadow: none;
+
+            &::before {
+                transform: rotate(45deg) translate(35px, -35px);
+            }
+
+            &::after {
+                transform: rotate(-45deg) translate(35px, 35px);
+            }
+        }
+    }
+}

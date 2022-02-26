@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('meta.html', {
+    "title": "Home"
+  })
+  <body>
+    @@include('nav.html')
+
+    <div class="test">
+        <h1 class="test__title">Here is an H1</h1>
+        <div class="test__buttons">
+            <a href="#" class="test__button">Test Button</a>
+        </div>
+        <p class="test__text">Here is a p text test bit <a href="#" class="test__link">with a link</a> inside</p>
+    </div>
+
+    <div class="button-container">
+        <button class="button">
+            Nikki's Website
+            <div class="button__horizontal"> </div>
+            <div class="button__vertical"> </div>
+        </button>
+    </div>
+
+    @@include('./components/button-lines.html')
+
+    @@include('carousel.html')
+
+    @@include('./components/image-container.html', {
+      'classname': 'image-container--portrait',
+      'image': './assets/images/kyo.jpg'
+    })
+
+    @@include('accordion.html')
+
+    @@include('./components/image-container.html', {
+      'classname': 'image-container--circle',
+      'image': './assets/images/kyo.jpg'
+    })
+
+    @@include('text-image.html', {
+        'title_one': 'this is a title',
+        'content_one': 'this is some content',
+        'button_text_one': 'this is a button',
+        'title_two': 'this is a second title',
+        'content_two': 'this is some more content',
+        'button_text_two': 'this is another button',
+    })
+
+    @@include('footer.html')
+
+    <script src="assets/js/main.js"> </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,67 @@
+.image-container {
+    $root: &;
+    $portrait: #{$root}--portrait;
+    $landscape: #{$root}--landscape;
+    $circle: #{$root}--circle;
+
+    margin-bottom: 50px;
+
+    &--portrait {
+
+    }
+
+    &--landscape {
+
+    }
+
+    &--circle {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 50%;
+        margin: 0 auto 50px;
+
+        @media (max-width: 600px) {
+
+        }
+    }
+
+    &__image {
+        height: 0;
+
+        #{$landscape} & {
+            width: 100%;
+            padding-top: 45%;
+            margin: 0 auto;
+        }
+
+        #{$portrait} & {
+            width: 60%;
+            max-width: 500px;
+            padding-top: 70%;
+            margin: 0 auto;
+            @include box-shadow();
+        }
+
+        #{$circle} & {
+            width: 50%;
+            padding-top: 50%;
+            margin: 0 auto;
+            border-radius: 50%;
+            
+            img {
+                border-radius: 50%; 
+            }
+
+            @include img-zoom();
+
+            @media (max-width: 1024px) {
+                width: 100%;
+                padding-top: 100%;
+            }
+            
+        }
+
+        @include image();
+
+    }
+}

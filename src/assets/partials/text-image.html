@@ -1,0 +1,26 @@
+<section class="text-image">
+    <div class="text-image__container container">
+        @@include('./components/image.html', {
+            'classname': 'image--text-image',
+            'image': './assets/images/kratos.jpg'
+        })
+        <div class="text-image__text-box">
+            <h3 class="text-image__title">@@title_one</h3>
+            <p class="text-image__text">@@content_one</p>
+            <a href="" class="text-image__link">@@button_text_one</a>
+        </div>
+    </div>
+</section>
+<section class="text-image text-image--reverse">
+    <div class="text-image__container container">
+        @@include('./components/image.html', {
+            'classname': 'image--text-image',
+            'image': './assets/images/kyo.jpg'
+        })
+        <div class="text-image__text-box">
+            <h3 class="text-image__title">@@title_two</h3>
+            <p class="text-image__text">@@content_two</p>
+            <a href="" class="text-image__link">@@button_text_two</a>
+        </div>
+    </div>
+</section>

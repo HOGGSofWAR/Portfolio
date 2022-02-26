@@ -1,0 +1,23 @@
+.test {
+    @include container();
+
+    &__buttons {
+
+    }
+
+    &__button {
+        @include button();
+    }
+
+    &__title {
+        @include h1();
+    }
+
+    &__text {
+        @include p();
+    }
+
+    &__link {
+        @include a();
+    }
+}
