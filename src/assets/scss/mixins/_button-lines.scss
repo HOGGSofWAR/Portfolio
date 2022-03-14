@@ -2,11 +2,11 @@
     $root: &;
   
     margin: 0 auto;
-    border: 2px solid $coral;
+    border: $blButtonBorder;
     padding: 10px 20px;
     cursor: pointer;
     @include p();
-    color: $black;
+    color: $blButtonColor;
     outline: none;
     display: inline-block;
     position: relative;
@@ -14,12 +14,13 @@
     transition: all 0.3s;
     background: transparent;
     text-decoration: none;
+    text-transform: lowercase;
   
     &::before {
       content: "";
       position: absolute;
-      border-top: 2px solid $coral;
-      border-bottom: 2px solid $coral;
+      border-top: $blButtonBorder;
+      border-bottom: $blButtonBorder;
       top: -2px;
       left: -20px;
       right: 0;
@@ -32,8 +33,8 @@
     &::after {
       content: "";
       position: absolute;
-      border-left: 2px solid $coral;
-      border-right: 2px solid $coral;
+      border-left: $blButtonBorder;
+      border-right: $blButtonBorder;
       top: -20px;
       left: -2px;
       right: 0;
@@ -45,7 +46,7 @@
   
     &:hover {
   
-      background-color: $salmon;
+      background-color: $blButtonBgHover;
       color: $white;
       transition: all 0.3s;
   
@@ -73,8 +74,8 @@
     }
   
     &__horizontal {
-      border-left: 2px solid $coral;
-      border-right: 2px solid $coral;
+      border-left: $blButtonBorder;
+      border-right: $blButtonBorder;
       height: 100%;
       width: 100%;
       padding: 2px 20px;
@@ -88,8 +89,8 @@
     }
   
     &__vertical {
-      border-top: 2px solid $coral;
-      border-bottom: 2px solid $coral;
+      border-top: $blButtonBorder;
+      border-bottom: $blButtonBorder;
       height: 100%;
       width: 100%;
       padding: 20px 2px;

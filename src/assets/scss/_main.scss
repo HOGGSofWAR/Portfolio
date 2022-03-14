@@ -1,0 +1,18 @@
+.buttons {
+    display: flex;
+    margin: 0 auto;
+    margin: 0 auto 50px;
+    width: 100%;
+    max-width: 780px;
+    justify-content: space-between;
+
+    @media (max-width:1023px) {
+        flex-wrap: wrap;
+        width: 30%;
+    }
+    
+    @media (max-width: 599px) {
+        width: 100%;
+        max-width: 300px;
+    }
+}

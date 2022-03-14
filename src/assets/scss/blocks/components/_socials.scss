@@ -10,6 +10,20 @@
         height: 20px;
         width: 20px;
         list-style-type: none;
+        background: $socialBg;
+        padding: 10px;
+        border-radius: 5px;
+        transition: .5s;
+        cursor: pointer;
+
+        &:hover {
+            transition: .5s;
+            background: $socialBgHover;
+
+            svg {
+                fill: $socialFillHover;
+            }
+        }
 
         &:not(:last-of-type) {
             margin-right: 10px;
@@ -27,12 +41,12 @@
         svg {
             height: 20px;
             width: 20px;
-            fill: $white;
+            fill: $socialFill;
             transition: .5s;
 
-            &:hover {
-                fill: $teal;
-            }
+            // &:hover {
+            //     fill: $teal;
+            // }
         }
     }
 }

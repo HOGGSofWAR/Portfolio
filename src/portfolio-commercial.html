@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('meta.html', {
+"title": "Commercial Portfolio"
+})
+
+<body>
+    @@include('nav.html')
+
+    <main>
+
+        <div class="body-text">
+            <div class="body-text__container container">
+                <h1 class="body-text__header">Commercial Portfolio</h1>
+            </div>
+        </div>
+
+        <div class="body-text">
+            <div class="body-text__container container">
+                <p class="body-text__text">Here is my commercial portfolio! This is a list of some of the web development projects I worked on at my 2 years in a web agency. We also had other sites which I either reworked which were built by external developers or sites which I worked on as a maintainer however these were some of our main in house built Wordpress sites.</p>
+            </div>
+        </div>
+
+        @@include('text-image-basic-img-link.html', {
+        'classname': 'text-image--basic text-image--center',
+        'classname_image': 'image--contain image--zoom',
+        'image': './assets/images/frank-water-portfolio.jpg',
+        'title_one': 'Frank Water',
+        'content_one': 'A solo built Wordpress E-commerce website. <br> <br> This was my biggest project whilst working at an agency with a huge responsibility on a short timescale with constant changing requirements which all added extra challenges to the project mid build. In this project I turned what was more of a print design than a web design into code. I used HTML, PHP, Javascript, VueJS and SCSS. Woocommerce was used for the E-commerce side of the site. This website had some of the most challenging scss I have experienced, with lots of pseudo water droplet elements and background elements in different variations across different pages. VueJS was used for the blog feed and the filters. Filters were based on custom post types after originally being requested to be built using categories - this mean a huge rebuild of all feed sections and even some carousel blocks in just a couple of days. Whilst I wish the project could have been smoother from a project planning and communication perspective it is one of my proudest pieces of work.',
+        'button_text_one': 'Go to Frank Water',
+        'button_link': 'https://www.frankwater.com',
+        })
+
+        @@include('text-image-basic-img-link.html', {
+        'classname': 'text-image--basic text-image--reverse text-image--center',
+        'classname_image': 'image--contain image--zoom',
+        'image': './assets/images/bristol-carpet-and-flooring-portfolio.png',
+        'title_one': 'Bristol Carpet and Flooring',
+        'content_one': 'I worked on this project with one other developer and this was built using a component based structure which kept the code more organised and pleasant to work with. I built quite a few of the blocks on the site including the contact form using gravity forms and a gravity forms mixin which I developed to make styling an entire gravity forms cross browser and cross device take minutes instead of potentially days. I also solely built carpet pages on the E-commerce side which includes the colour picker filter. This page can be found <a href="https://www.bristolcarpetflooring.co.uk/product/carpet/smart-waterford-twist/" target="_blank">here</a>',
+        'button_text_one': 'Go to BCFG',
+        'button_link': 'https://www.bristolcarpetflooring.co.uk/',
+        })
+
+        @@include('text-image-basic-img-link.html', {
+        'classname': 'text-image--basic text-image--center',
+        'classname_image': 'image--zoom',
+        'image': './assets/images/bristol-creative-industries.jpg',
+        'title_one': 'Bristol Creative Industries',
+        'content_one': 'One of my earlier web development projects. Whilst I contributed to a lot of this website, one of my bigger contributions was for a section of the members area where students could showcase their videos of short films they had made at university. This had search functionality, category filters and inbuilt video play for YouTube and Vimeo. Unfortunately this can only be accessed by members so even I cannot access this to show a screenshot of how it looks and works.',
+        'button_text_one': 'Go to BCI',
+        'button_link': 'https://bristolcreativeindustries.com/',
+        })
+
+        @@include('text-image-basic-img-link.html', {
+        'classname': 'text-image--basic text-image--reverse text-image--center',
+        'classname_image': 'image--contain image--zoom',
+        'image': './assets/images/turn-the-tables.png',
+        'title_one': 'Turn the Tables',
+        'content_one': "My first solo front end build of a website before I learnt PHP and backend development. This had a video animated header as well which required me to also generate the header using an Adobe After Effects which used the Lottie and Bodymovin plugins",
+        'button_text_one': 'Go to TTT',
+        'button_link': 'https://www.turnthetablespr.com/',
+        })
+
+        @@include('text-image-basic-img-link.html', {
+        'classname': 'text-image--basic text-image--center',
+        'classname_image': 'image--contain image--zoom',
+        'image': './assets/images/imaginatal.png',
+        'title_one': 'Imaginatal',
+        'content_one': 'One of the big challenges for this website was to get the text-image blocks with heart backgrounds to recognise if there was another text-image block above or below itself to control padding and heart positioning on the site.',
+        'button_text_one': 'Go to Imaginatal',
+        'button_link': 'https://www.imaginatal.co.uk/',
+        })
+
+        @@include('text-image-basic-img-link.html', {
+        'classname': 'text-image--basic text-image--reverse text-image--center',
+        'classname_image': 'image--contain image--zoom',
+        'image': './assets/images/world-wide-roar.jpg',
+        'title_one': 'World Wide Roar',
+        'content_one': 'This website was worked on with two other developers',
+        'button_text_one': 'Go to WWR',
+        'button_link': 'https://www.worldwideroar.org/',
+        })
+        
+
+        @@include('text-image-basic-img-link.html', {
+        'classname': 'text-image--basic text-image--center',
+        'classname_image': 'image--contain image--zoom',
+        'image': './assets/images/accoya.png',
+        'title_one': 'Accoya',
+        'content_one': 'One of our biggest web development projects',
+        'button_text_one': 'Go to Accoya',
+        'button_link': 'https://www.accoya.com/uk/',
+        })
+
+        @@include('text-image-basic-img-link.html', {
+        'classname': 'text-image--basic text-image--reverse text-image--center',
+        'classname_image': 'image--contain image--zoom',
+        'image': './assets/images/uk-lintels.png',
+        'title_one': 'UK Lintels',
+        'content_one': 'My first E-commerce website - working with one other developer on the entire site',
+        'button_text_one': 'Go to UK Lintels',
+        'button_link': 'https://uklintels.com/',
+        })
+
+    </main>
+
+
+    @@include('footer.html')
+
+</body>

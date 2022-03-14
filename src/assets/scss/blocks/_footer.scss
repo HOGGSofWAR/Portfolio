@@ -1,6 +1,10 @@
 .footer {
     background: $primary;
 
+    @media (min-width: 1023px) {
+        height: 283px;
+    }
+
     &__container {
 
     }
@@ -59,6 +63,7 @@
 
     &__bottom {
         text-align: center;
+        margin-bottom: 5px;
     }
 
     &__terms {
@@ -67,6 +72,12 @@
 
         a {
             @include a();
+            color: $darksalmon;
+            font-weight: $f-bold;
+
+            &:hover {
+                color: $white;
+            }
         }
     }
 

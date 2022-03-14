@@ -13,10 +13,20 @@ html {
 body {
   margin: 0;
   // font-family: $muli;
-
-    h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, figure, img {
-        margin: 0;
-    }
-
   padding-top: 100px;
+  background: $secondary;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 100px);
+
+
+  h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, figure, img {
+      margin: 0;
+  }
+
+  main {
+
+  }
 }

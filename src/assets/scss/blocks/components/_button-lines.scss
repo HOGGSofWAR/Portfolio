@@ -1,11 +1,20 @@
 .button-container {
-    background-color: $pink;
+    //background-color: $pink;
     padding: 40px;
     margin-bottom: 40px;
     text-align: center;
+
+    @media(max-width: 1023px) {
+        padding: 40px 0;
+        width: 100%;
+    }
     
 }
 
 .button {
     @include button-lines();
+
+    @media(max-width: 1023px) {
+        width: 60%;
+    }
 }

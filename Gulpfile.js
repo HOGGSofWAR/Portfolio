@@ -80,6 +80,13 @@ function img() {
   );
 }
 
+function video() {
+  return (
+    src("src/assets/videos/**/*")
+      .pipe(dest("public/assets/videos/"))
+  );
+}
+
 function fonts() {
   return src("src/assets/fonts/*.{eot,svg,ttf,woff,woff2}").pipe(
     dest("public/assets/fonts/")
@@ -91,6 +98,7 @@ function watchFiles() {
   watch("src/assets/**/*.scss", series(css, reload));
   watch("src/assets/**/*.js", series(js, reload));
   watch("src/assets/img/**/*.*", series(img));
+  watch("src/assets/videos/**/*.*", series(video));
   watch("src/assets/**/*.{eot,svg,ttf,woff,woff2}", series(fonts));
 
   return;
@@ -106,5 +114,5 @@ exports.js = js;
 exports.fonts = fonts;
 exports.img = img;
 exports.del = del;
-exports.serve = parallel(html, css, js, img, fonts, watchFiles, serve);
-exports.default = series(del, html, css, js, img, fonts);
+exports.serve = parallel(html, css, js, img, video, fonts, watchFiles, serve);
+exports.default = series(del, html, css, js, img, video, fonts);

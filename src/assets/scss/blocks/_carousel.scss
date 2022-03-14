@@ -1,8 +1,25 @@
 .carousel {
     $root: &;
     $item: #{$root}__item;
+    $sideButtons: #{$root}--side-buttons;
 
-    @include container();
+   @include container();
+
+    &--side-buttons {
+        //display: flex;
+        padding-bottom: 3%;
+        margin-bottom: 70px;
+        overflow: hidden;
+    }
+    
+    &__container {
+        position: relative;
+    }
+
+    &__slide-container {
+        display: flex;
+        width: 100%;
+    }
 
     &__slides {
         display: flex;
@@ -11,6 +28,8 @@
         margin-bottom: 50px;
         overflow: hidden;
         @include p();
+        z-index: 3;
+        pointer-events: none;
     }
 
     &__item {
@@ -20,16 +39,59 @@
         padding: 100px;
         background: $salmon;
         text-align: center;
-        margin-right: 20px;
+        //margin-right: 20px;
         transition: .2s;
+        display: none;
+        margin: 0 auto;
+
+        width: 100%;
+        max-width: 500px;
+        padding: 200px 100px;
 
         &--selected {
             background: $coral;
+            display: block;
+        }
+
+        &--video {
+            padding: 0;
+            padding: 0;
+            position: relative;
+            height: 0;
+            padding-top: 32%;
+            width: 50%;
+            max-width: 610px;
+
+            @media (max-width: 1023px) {
+                width: 100%;
+                padding-top: 60%;
+                max-width: 100%;
+            }
+
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
         }
     }
 
     &__nav {
         text-align: center;
+
+        #{$sideButtons} & {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            bottom: -60px;
+            z-index: 1;
+        }   
     }
 
     &__button {
@@ -40,6 +102,7 @@
         display: inline-block;
         cursor: pointer;
         transition: .2s;
+        margin-bottom: 70px;
 
         &:not(:last-of-type) {
             margin-right: 10px;
@@ -53,5 +116,19 @@
             background: $coral;
         }
 
+        #{$sideButtons} & {
+            margin-bottom: 10px;
+        }
+
+    }
+
+    &__border {
+        position: absolute;
+        border: 1px solid $blueblack;
+        height: 70%;
+        width: 100%;
+        top: 40%;
+        z-index: 2;
+        pointer-events: none;
     }
 }

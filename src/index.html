@@ -1,58 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('meta.html', {
-    "title": "Home"
+@@include('meta.html', {
+"title": "Home"
+})
+
+<body>
+  @@include('nav.html')
+
+  <main>
+  <div class="body-text">
+    <div class="body-text__container container">
+      <h1 class="body-text__title">Nicola Hogg</h1>
+    </div>
+  </div>
+
+  @@include('text-image-bespoke.html', {
+  'classname': 'text-image--reverse',
+  'classname-image': 'image--circle-mobile',
+  'classname-border': 'text-image__border--circle-mobile',
+  'image': './assets/images/me.jpg',
+  'title_two': 'Portfolio',
+  'content_two': 'Welcome! I am a web developer with 2+ years of full stack commercial experience with Wordpress. I also have several hobby projects which can be found in my personal projects section. I have also recently launched my own Freelancing company Ambedo Web Development. I am only considering fully remote roles at this time. My skillset includes but is not limited to: ',
+  'list_one': 'HTML',
+  'list_two': 'SCSS - BEM',
+  'list_three': 'Javascript - VueJS - React',
+  'list_four': 'Node and PHP',
+  'list_five': 'Wordpress',
+  'list_six': 'Forge and Netlify',
+  'button_text': 'View my LinkedIn',
+  'button_link': 'https://www.linkedin.com/in/nicola-hogg/',
   })
-  <body>
-    @@include('nav.html')
 
-    HELLO
-
-    <div class="test">
-        <h1 class="test__title">Here is an H1</h1>
-        <div class="test__buttons">
-            <a href="#" class="test__button">Test Button</a>
-        </div>
-        <p class="test__text">Here is a p text test bit <a href="#" class="test__link">with a link</a> inside</p>
+  <div class="body-text">
+    <div class="body-text__container container">
+      <h2 class="body-text__header">My Work</h2>
     </div>
+  </div>
 
-    <div class="button-container">
-        <button class="button">
-            Nikki's Website
-            <div class="button__horizontal"> </div>
-            <div class="button__vertical"> </div>
-        </button>
+  <div class="buttons">
+    @@include('./components/button-lines.html', {
+    'title': 'Commercial',
+    'button_link': 'portfolio-commercial.html',
+    })
+    @@include('./components/button-lines.html', {
+    'title': 'Personal',
+    'button_link': 'portfolio-personal.html',
+    })
+    @@include('./components/button-lines.html', {
+    'title': 'Freelance',
+    'button_link': 'portfolio-freelance.html',
+    })
+  </div>
+
+  <div class="body-text body-text--reverse">
+    <div class="body-text__container container">
+      <h2 class="body-text__header">My Commercial Wordpress Developments</h2>
+      <p class="body-text__text body-text__text--right">Below are some examples of Wordpress sites I either built by
+        myself in their entirety or worked on with another developer whilst I was part of a web agency. For more
+        information about each project please visit my portfolio section by clicking <a class="body-text__link"
+          href="/portfolio">here</a></p>
     </div>
+  </div>
 
-    @@include('./components/button-lines.html')
+  @@include('carousel.html', {
+  'classname': 'carousel--side-buttons',
+  })
 
-    @@include('carousel.html')
+  <div class="body-text body-text">
+    <div class="body-text__container container">
+      <h2 class="body-text__header">My hobbies</h2>
+    </div>
+  </div>
 
-    @@include('./components/image-container.html', {
-      'classname': 'image-container--portrait',
-      'image': './assets/images/kyo.jpg'
-    })
+  @@include('accordion.html')
 
-    @@include('accordion.html')
+  <div class="body-text body-text--reverse">
+    <div class="body-text__container container">
+      <h2 class="body-text__header">Click below for my art account</h2>
+    </div>
+  </div>
 
-    @@include('./components/image-container.html', {
-      'classname': 'image-container--circle',
-      'image': './assets/images/kyo.jpg'
-    })
+  @@include('./components/image-container-link.html', {
+  'classname': 'image-container--circle',
+  'image': './assets/images/winds-canvas-art-spiritfarer.jpg',
+  'image_link': 'https://www.instagram.com/windscanvas'
+  })
+  </main>
 
-    @@include('text-image.html', {
-        'title_one': 'this is a title',
-        'content_one': 'this is some content',
-        'button_text_one': 'this is a button',
-        'title_two': 'this is a second title',
-        'content_two': 'this is some more content',
-        'button_text_two': 'this is another button',
-    })
+  @@include('footer.html')
 
-    @@include('footer.html')
+  <script src="assets/js/main.js"> </script>
 
-    <script src="assets/js/main.js"> </script>
-
-  </body>
+</body>
 
 </html>

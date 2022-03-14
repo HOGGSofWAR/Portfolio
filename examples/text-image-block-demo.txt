@@ -1,0 +1,23 @@
+
+//how to write text-image blocks
+
+//classnames: text-image--reverse, text-image--basic, text-image--center
+
+
+//below is a bespoke text image block with borders and lists etc
+
+/** 
+@@include('text-image-bespoke.html', {
+    'classname': 'text-image--reverse',
+    'classname-image': 'image--circle-mobile',
+    'classname-border': 'text-image__border--circle-mobile',
+    'image': './assets/images/me.jpg'
+    'title_two': 'Portfolio',
+    'content_two': 'Welcome! I am a web developer with 2+ years of full stack commercial experience with Wordpress. I also have several hobby projects which can be found in my personal projects section. I have also recently launched my own Freelancing company Ambedo Web Development. My skillset includes but is not limited to:',
+    'list_one': 'HTML',
+    'list_two': 'SCSS - BEM',
+    'list_three': 'Javascript - VueJS - React',
+    'list_four': 'Node and PHP',
+    'button_text_two': 'View my LinkedIn',
+  })
+**/

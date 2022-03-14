@@ -1,4 +1,4 @@
-document.querySelectorAll(".carousel").forEach(carousel => {
+document.querySelectorAll(".carousel__slide-container").forEach(carousel => {
   const items = carousel.querySelectorAll(".carousel__item");
   const buttonsHTML = Array.from(items, () => {
       return `<span class="carousel__button"></span>`;

@@ -1,11 +1,14 @@
-// Globals
-@import "global";
 
 //@import "functions";
 @import "mixins";
 @import "vars";
 @import "config";
+
 //@import "global";
+
+// Globals
+@import "global";
+@import "main";
 
 // Blocks
 @import "blocks";

@@ -2,32 +2,32 @@
     font-family: $fontprimary;
     font-size: 120px;
     line-height: 125px;
-    font-weight: $f-bold;
-    color: $coral;
+    font-weight: $f-light;
+    color: $tertiary;
 }
 
 @mixin h2() {
     font-family: $fontprimary;
     font-size: 80px;
     line-height: 85px;
-    font-weight: $f-bold;
-    color: black;
+    font-weight: $f-light;
+    color: $tertiary;
 }
 
 @mixin h3() {
     font-family: $fontprimary;
     font-size: 60px;
     line-height: 65px;
-    font-weight: $f-bold;
-    color: black;
+    font-weight: $f-light;
+    color: $tertiary;
 }
 
 @mixin h4() {
     font-family: $fontprimary;
     font-size: 40px;
     line-height: 45px;
-    font-weight: $f-bold;
-    color: black;
+    font-weight: $f-light;
+    color: $tertiary;
 }
 
 @mixin p() {
@@ -35,20 +35,21 @@
     font-size: 16px;
     line-height: 20px;
     font-weight: $f-regular;
-    color: black;
+    color: $tertiary;
+    letter-spacing: 0.02em;
 }
 
 @mixin a() {
     font-family: $fontprimary;
     font-size: 16px;
     line-height: 20px;
-    font-weight: $f-bold;
-    color: $coral;
+    font-weight: $f-regular;
+    color: $blueblack;
     text-decoration: none;
     transition: .2s;
 
     &:hover {
-        color: $salmon;
+        color: $darksalmon;
     }
 }
 
@@ -63,6 +64,6 @@
     text-transform: lowercase;
 
     &:hover {
-        color: $teal;
+        color: $darksalmon;
     }
 }

@@ -3,12 +3,16 @@
     $box: #{$root}__box;
     $active: #{$box}--active;
 
-    @include container();
-
+    margin-bottom: 50px;
+    
+    &__container {
+        // @include container();
+    }
+    
     &__box {
         position: relative;
-        margin: 10px 0;
-        background: $primary;
+        margin: 0 0 10px 0;
+        background: $accordionContentBg;
 
         &--active {
             
@@ -17,18 +21,19 @@
     }
 
     &__label {
-        background: $primary;
-        padding: 10px;
+        background: $accordionBg;
+        padding: 12px 10px 10px;
         cursor: pointer;
         transition: .2s;
         position: relative;
         margin: 0;
         @include p();
-        color: $black;
+        color: $accordionColor;
+        text-transform: uppercase;
 
         &:hover {
-            background: $secondary;
-            color: $white;
+            background: $accordionBgHover;
+            color: $accordionColorHover;
             transition: .2s;
 
             &::before,
@@ -47,7 +52,7 @@
 
             width: 10px;
             height: 2px;
-            background: $black;
+            background: $accordionColor;
         }
 
         &::after {
@@ -60,18 +65,18 @@
 
             width: 2px;
             height: 10px;
-            background: $black;
+            background: $accordionColor;
         }
 
         #{$active} & {
-            background: $secondary;
-            color: $white;
+            background: $accordionBgHover;
+            color: $accordionColorHover;
             
             &::before {
                 content: '';
                 width: 10px;
                 height: 2px;
-                background: $white;
+                background: $accordionColorHover;
 
             }
 
@@ -89,10 +94,17 @@
         //overflow-y: auto;
         padding: 0 10px;
         @include p();
+        color: $accordionContentColor;
 
         #{$active} & {
          height: 150px;   
          padding: 10px;
+        }
+
+        a {
+            @include a();
+            color: $accordionColor;
+            font-weight: $f-bold;
         }
 
     }

@@ -1,11 +1,40 @@
 .text-image {
     $root: &;
     $reverse: #{$root}--reverse;
+    $bespoke: #{$root}--bespoke;
+    $basic: #{$root}--basic;
 
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+    overflow: hidden;
+
+    @media (max-width: 1024px) {
+        margin-bottom: 50px;
+    }
+
+    @media (max-width: 599px) {
+        margin-bottom: 30px;
+    }
 
     &--reverse {
 
+    }
+
+    &--border {
+
+    }
+
+    &--basic {
+
+    }
+
+    &--center {
+        .text-image__container {
+            align-items: center;
+        }
+    }
+
+    &--bespoke {
+        
     }
 
     &__container {
@@ -22,6 +51,23 @@
 
         @media (max-width: 1024px) {
             flex-direction: column;
+        }
+    }
+
+    &__img-link {
+        display: inline-block;
+    }
+
+    &__border {
+        width: 32%;
+        border: 1px solid white;
+        padding: 10px;
+
+        &--circle-mobile {
+            @media (max-width: 1024px) {
+                border-radius: 50%;
+                margin: 0 auto 40px;
+            }
         }
     }
 
@@ -44,16 +90,70 @@
     &__title {
         @include h3();
         margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+        
+        
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: $white;
+            left: 0;
+            bottom: 0;
+        }
+
+        &::before {
+            right: -100vw;
+            width: 100vw;
+        }
+
+        #{$reverse} & {
+            &::before {
+                left: -100vw;
+                width: 100vw;
+                right: 0;
+            }
+        }
+
     }
 
     &__text {
         @include p();
         margin-bottom: 30px;
 
+        a {
+            @include a();
+        }
+
         
+    }
+
+    &__list {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    &__list-item {
+        @include p();
+
+        list-style-type: none;
+        position: relative;
+        padding-left: 15px;
+        margin-bottom: 5px;
+
+        &::before {
+            content: "\2027";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
     }
 
     &__link {
         @include button();
     }
+
 }

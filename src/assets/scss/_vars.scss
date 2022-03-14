@@ -7,28 +7,63 @@ $pink: #f2ded7;
 $lightgreen: #a1c0ba;
 $teal: #6f8e88;
 
+//portfolio colours
+$beigepink: #CCB7AB;
+$blueblack: #3c3c3b;
+$darksalmon: #AD827C;
+$lightpink: #E7D8D1;
+
 
 
 // Fonts
 // $muli: 'Muli', sans-serif;
 $quatrocento: 'Quattrocento Sans', sans-serif;
+$khula: 'khula', sans-serif;
+$monsterrat: 'monsterrat', sans-serif;
 
 // theme
-$primary: $lightgreen;
-$secondary: $teal;
-$tertiary: $salmon;
-$fontprimary: $quatrocento;
+$primary: $blueblack;
+$secondary: $beigepink;
+$tertiary: $white;
+$fontprimary: $khula;
 
 //buttons
-$buttonbg: $teal;
+/**basic button**/
+$buttonbg: $darksalmon;
 $buttoncolor: $white;
-$buttonbghover: $lightgreen;
+$buttonbghover: $blueblack;
+$buttonfont: $fontprimary;
+$buttonLetterSpacing: 0.1em;
 
+/**button lines animation**/
+$blButtonBorder: 2px solid $blueblack;
+$blButtonColor: $blueblack;
+$blButtonBgHover: $darksalmon;
+
+//socials
+$socialBg: $tertiary;
+$socialFill: $primary;
+$socialBgHover: $darksalmon;
+$socialFillHover: $white;
 
 //carousel
+
 //accordion
+$accordionBg: $darksalmon;
+$accordionColor: $blueblack;
+$accordionContentBg: $white;
+$accordionContentColor: $blueblack;
+$accordionBgHover: $blueblack;
+$accordionColorHover: $white;
+
 //nav
 //footer
+
+//unicode bullet points
+/** 
+\0f0B
+\2027
+**/
 
 // Font Weights
 $f-light: 300;

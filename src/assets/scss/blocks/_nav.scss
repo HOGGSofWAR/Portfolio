@@ -13,15 +13,18 @@
     right: 0;
     width: 100%;
     z-index: 10;
+    padding: 20px 0;
 
     &--desktop {
+        height: 40px;
+
         @media (max-width: 1023px) {
             display: none;
         }
     }
 
     &--mobile {
-        height: 130px;
+        height: 40px;
         
 
         @media (min-width: 1024px) {
@@ -44,9 +47,9 @@
         
         display: flex;
         justify-content: space-between;
-        align-items: center;
-
+        
         #{$desktop} & {
+            align-items: center;
 
         }
 
@@ -56,7 +59,7 @@
             position: absolute;
             right: 0;
             height: 92vh;
-            top: 130px;
+            top: 80px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -119,13 +122,28 @@
     &__menu-item,
     &__menu-item-has-children {
 
+        #{$desktop} & {
+            padding: 10px;
+        }
+
         a {
             @include nav();
 
-            #{$desktop} & {
-                padding: 10px;
+            
+        }
+
+        p {
+            @include nav();
+            cursor: default;
+
+            &:hover {
+                color: $white;
             }
         }
+    }
+
+    &__menu-item-has-children {
+        // pointer-events: none;
     }
 
     &__mobile {
@@ -143,7 +161,7 @@
             overflow: hidden;
             position: absolute;
             width: 200px;
-            top: 25px;
+            top: 31px;
             left: -20px;
             padding-left: 0;
             background: $primary;

@@ -27,6 +27,8 @@
 
     &__image {
         height: 0;
+        display: block;
+        @include image();
 
         #{$landscape} & {
             width: 100%;
@@ -60,8 +62,6 @@
             }
             
         }
-
-        @include image();
 
     }
 }
