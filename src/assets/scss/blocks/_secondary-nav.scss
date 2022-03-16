@@ -1,14 +1,38 @@
 .secondary-nav {
 
+    margin-bottom: 50px;
+
     &__container {
 
     }
 
     &__menu-items {
         display: flex;
+        width: 100%;
+        padding-left: 0;
+        justify-content: center;
+
+        @media (max-width: 1024px) {
+            flex-wrap: wrap;
+        }
     }
 
     &__menu-item {
+        list-style-type: none;
 
+        a {
+            @include a();
+            display: inline-block;
+            padding: 20px 30px;
+            background: $darksalmon;
+
+            &:hover {
+                background: $blueblack;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            margin-bottom: 20px;
+        }
     }
 }

@@ -1,0 +1,40 @@
+<section class="image-tile">
+    <div class="image-tile__container container">
+        <div class="image-tile__box">
+            @@include('./components/image.html', {
+                'classname': '@@classname_image',
+                'image': '@@image_one',
+                'clickable': false,
+            })
+            <div class="image-tile__content">
+                <h3 class="image-tile__title">@@title_one</h3>
+                <a href="@@text_link_one" target="_blank" class="image-tile__link">@@text_link_text_one</a>
+                <a href="@@button_link_one" target="_blank" class="image-tile__button">@@button_link_text_one</a>
+            </div>
+        </div>
+        <div class="image-tile__box">
+            @@include('./components/image.html', {
+                'classname': '@@classname_image',
+                'image': '@@image_two',
+                'clickable': false,
+            })
+            <div class="image-tile__content">
+                <h3 class="image-tile__title">@@title_two</h3>
+                <a href="@@text_link_two" target="_blank" class="image-tile__link">@@text_link_text_two</a>
+                <a href="@@button_link_two" target="_blank" class="image-tile__button">@@button_link_text_two</a>
+            </div>
+        </div>
+        <div class="image-tile__box">
+            @@include('./components/image.html', {
+                'classname': '@@classname_image',
+                'image': '@@image_three',
+                'clickable': false,
+            })
+            <div class="image-tile__content">
+                <h3 class="image-tile__title">@@title_three</h3>
+                <a href="@@text_link_three" target="_blank" class="image-tile__link">@@text_link_text_three</a>
+                <a href="@@button_link_three" target="_blank" class="image-tile__button">@@button_link_text_three</a>
+            </div>
+        </div>
+    </div>
+</section>
