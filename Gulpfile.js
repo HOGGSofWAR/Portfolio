@@ -20,7 +20,7 @@ function reload(done) {
 function serve() {
   server.init({
     server: {
-      baseDir: "public",
+      baseDir: "docs",
     },
   });
 }
@@ -40,7 +40,7 @@ function html() {
     )
     // .pipe(htmlbeautify())
     // .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(dest("public"));
+    .pipe(dest("docs"));
 }
 
 function css() {
@@ -54,7 +54,7 @@ function css() {
       })
     )
     .pipe(cssmin())
-    .pipe(dest("public/assets/css"));
+    .pipe(dest("docs/assets/css"));
 }
 
 function js() {
@@ -68,7 +68,7 @@ function js() {
       // .pipe(concat('all.js'))
       //   .pipe(gulpIf(isProd, uglify()))
       // .pipe(uglify())
-      .pipe(dest("public/assets/js"))
+      .pipe(dest("docs/assets/js"))
   );
 }
 
@@ -76,20 +76,20 @@ function img() {
   return (
     src("src/assets/images/**/*")
       // .pipe(imagemin())
-      .pipe(dest("public/assets/images/"))
+      .pipe(dest("docs/assets/images/"))
   );
 }
 
 function video() {
   return (
     src("src/assets/videos/**/*")
-      .pipe(dest("public/assets/videos/"))
+      .pipe(dest("docs/assets/videos/"))
   );
 }
 
 function fonts() {
   return src("src/assets/fonts/*.{eot,svg,ttf,woff,woff2}").pipe(
-    dest("public/assets/fonts/")
+    dest("docs/assets/fonts/")
   );
 }
 
@@ -105,7 +105,7 @@ function watchFiles() {
 }
 
 function del() {
-  return src("public/*", { read: false }).pipe(clean());
+  return src("docs/*", { read: false }).pipe(clean());
 }
 
 exports.css = css;
