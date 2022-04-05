@@ -20,6 +20,11 @@
     line-height: 65px;
     font-weight: $f-light;
     color: $tertiary;
+
+    @media (max-width: 599px) {
+        font-size: 40px;
+        line-height: 45px;
+    }
 }
 
 @mixin h4() {

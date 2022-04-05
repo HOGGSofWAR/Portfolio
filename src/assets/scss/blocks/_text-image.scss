@@ -12,7 +12,7 @@
     }
 
     @media (max-width: 599px) {
-        margin-bottom: 30px;
+        margin-bottom: 60px;
     }
 
     &--reverse {
@@ -126,6 +126,10 @@
 
         a {
             @include a();
+        }
+
+        @media (max-width: 599px) {
+            margin-bottom: 10px;
         }
 
         

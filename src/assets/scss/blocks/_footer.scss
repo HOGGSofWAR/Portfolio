@@ -55,6 +55,7 @@
 
     &__item {
         list-style-type: none;
+        margin-bottom: 10px;
 
         a {
             @include nav();
