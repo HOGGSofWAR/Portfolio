@@ -9,7 +9,6 @@
         //display: flex;
         padding-bottom: 3%;
         margin-bottom: 70px;
-        overflow: hidden;
     }
     
     &__container {
@@ -19,17 +18,33 @@
     &__slide-container {
         display: flex;
         width: 100%;
+
+        @media (max-width: 1024px) {
+            display: block;
+        }
     }
 
     &__slides {
         display: flex;
         justify-content: space-between;
         width: 100%;
-        margin-bottom: 50px;
         overflow: hidden;
         @include p();
         z-index: 3;
         pointer-events: none;
+        
+        height: 0;
+        
+        @media (min-width: 1024px) {
+            margin-bottom: 50px;
+            padding-top: 35%;
+        }
+
+        @media (max-width: 1023px) {
+            padding-top: 56%;
+            margin-bottom: 20px;
+        }
+
     }
 
     &__item {
@@ -40,19 +55,14 @@
         background: $salmon;
         text-align: center;
         //margin-right: 20px;
-        transition: .2s;
+        transition: 0.5s;
         display: none;
         margin: 0 auto;
 
         width: 100%;
         max-width: 500px;
         padding: 200px 100px;
-
-        &--selected {
-            background: $coral;
-            display: block;
-        }
-
+        
         &--video {
             padding: 0;
             padding: 0;
@@ -61,13 +71,23 @@
             padding-top: 32%;
             width: 50%;
             max-width: 610px;
-
+            opacity: 0;
+            
+            position: absolute;
+            top: 0;
+            display: inline-block;
+            
+            @media (min-width: 1024px) {
+                left: 25%;
+            }
+            
             @media (max-width: 1023px) {
                 width: 100%;
-                padding-top: 60%;
+                padding-top: 56%;
                 max-width: 100%;
+                left: 0;
             }
-
+            
             video {
                 width: 100%;
                 height: 100%;
@@ -79,56 +99,134 @@
                 bottom: 0;
             }
         }
+
+        &--selected {
+            background: $coral;
+            // display: block;
+            opacity: 1;
+        }
+    }
+
+    &__nav-container {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 70%;
+        border: 1px solid $blueblack;
+        top: 40%;
+        overflow: hidden;
+
+        @media (max-width: 1024px) {
+            position: relative;
+            right: 0;
+            padding-bottom: 50px;
+            padding-top: 20px;
+        }
     }
 
     &__nav {
         text-align: center;
+        transition: transform 0.3s;
 
         #{$sideButtons} & {
             display: flex;
             flex-direction: column;
             position: absolute;
-            right: 0;
+            right: 40px;
             bottom: -60px;
             z-index: 1;
+            // transform: translatey(54%);
+
+            @media (max-width: 1024px) {
+                flex-direction: row;
+                position: relative;
+                right: 0;
+                bottom: 0;
+                // transform: translate(50%, 0);
+            }
         }   
+    }
+
+    &__button-box {
+        
+        @media (min-width: 1239px) {
+            margin-bottom: 10px;
+            align-items: center;
+            display: flex;
+        }
+
+        @media (max-width: 1024px) {
+            text-align: center;
+            display: flex;
+            flex-direction: column-reverse;
+            align-self: flex-start;
+            margin-right: 10px;
+        }
+
+        p {
+            @include p();
+            font-size: 14px;
+            color: $blueblack;
+            max-width: 70px;
+            text-align: right;
+            margin-right: 10px;
+
+            @media (max-width: 1024px) {
+                text-align: center;
+                margin: 0;
+                max-width: 60px;
+                margin: 0 auto;
+            }
+        }
+
+        &--selected {
+            .carousel__button {
+                background: $coral;
+                width: 75px;
+                height: 75px;
+                transition: 0.5s all;
+            }
+        }
     }
 
     &__button {
         background: $salmon;
-        border-radius: 50px;
-        height: 30px;
-        width: 30px;
+        // border-radius: 50%;
+        // height: 30px;
+        // width: 30px;
         display: inline-block;
         cursor: pointer;
         transition: .2s;
         margin-bottom: 70px;
+        width: 60px;
+        height: 60px;
+        border-radius: 0;
 
         &:not(:last-of-type) {
-            margin-right: 10px;
+            //margin-right: 10px;
         }
 
         &:hover {
             background: $coral;
         }
 
-        &--selected {
-            background: $coral;
-        }
+        // &--selected {
+        //     background: $coral;
+        //     width: 75px;
+        //     height: 75px;
+        //     transition: 0.5s all;
+        // }
 
         #{$sideButtons} & {
             margin-bottom: 10px;
+            margin: 0 0 0 auto;
+            // margin: 0 auto 10px;
+
+            @media (max-width: 1280px) {
+                margin: 0;
+            }
         }
 
-    }
-
-    &__border {
-        position: absolute;
-        border: 1px solid $blueblack;
-        height: 70%;
-        width: 100%;
-        top: 40%;
-        z-index: 2;
-        pointer-events: none;
     }
 }
