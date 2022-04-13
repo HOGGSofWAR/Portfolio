@@ -1,9 +1,18 @@
 .socials {
+    $root: &;
+    $basic: #{$root}--basic;
+
     display: flex;
     padding-left: 0;
 
     @media (max-width: 1025px) {
         width: 100%;
+    }
+
+    &--basic {
+    }
+
+    &--box {
     }
 
     &__item {
@@ -13,11 +22,11 @@
         background: $socialBg;
         padding: 10px;
         border-radius: 5px;
-        transition: .5s;
+        transition: 0.5s;
         cursor: pointer;
 
         &:hover {
-            transition: .5s;
+            transition: 0.5s;
             background: $socialBgHover;
 
             svg {
@@ -42,11 +51,41 @@
             height: 20px;
             width: 20px;
             fill: $socialFill;
-            transition: .5s;
+            transition: 0.5s;
 
             // &:hover {
             //     fill: $teal;
             // }
+        }
+
+        #{$basic} & {
+            height: 20px;
+            width: 20px;
+            list-style-type: none;
+
+            &:not(:last-of-type) {
+                margin-right: 10px;
+            }
+
+            a {
+                display: inline-block;
+            }
+
+            img {
+                height: 20px;
+                width: 20px;
+            }
+
+            svg {
+                height: 20px;
+                width: 20px;
+                fill: $white;
+                transition: 0.5s;
+
+                &:hover {
+                    fill: $teal;
+                }
+            }
         }
     }
 }
