@@ -1,91 +1,91 @@
-.socials {
-    $root: &;
-    $basic: #{$root}--basic;
+// .socials {
+//     $root: &;
+//     $basic: #{$root}--basic;
 
-    display: flex;
-    padding-left: 0;
+//     display: flex;
+//     padding-left: 0;
 
-    @media (max-width: 1025px) {
-        width: 100%;
-    }
+//     @media (max-width: 1025px) {
+//         width: 100%;
+//     }
 
-    &--basic {
-    }
+//     &--basic {
+//     }
 
-    &--box {
-    }
+//     &--box {
+//     }
 
-    &__item {
-        height: 20px;
-        width: 20px;
-        list-style-type: none;
-        background: $socialBg;
-        padding: 10px;
-        border-radius: 5px;
-        transition: 0.5s;
-        cursor: pointer;
+//     &__item {
+//         height: 20px;
+//         width: 20px;
+//         list-style-type: none;
+//         background: $socialBg;
+//         padding: 10px;
+//         border-radius: 5px;
+//         transition: 0.5s;
+//         cursor: pointer;
 
-        &:hover {
-            transition: 0.5s;
-            background: $socialBgHover;
+//         &:hover {
+//             transition: 0.5s;
+//             background: $socialBgHover;
 
-            svg {
-                fill: $socialFillHover;
-            }
-        }
+//             svg {
+//                 fill: $socialFillHover;
+//             }
+//         }
 
-        &:not(:last-of-type) {
-            margin-right: 10px;
-        }
+//         &:not(:last-of-type) {
+//             margin-right: 10px;
+//         }
 
-        a {
-            display: inline-block;
-        }
+//         a {
+//             display: inline-block;
+//         }
 
-        img {
-            height: 20px;
-            width: 20px;
-        }
+//         img {
+//             height: 20px;
+//             width: 20px;
+//         }
 
-        svg {
-            height: 20px;
-            width: 20px;
-            fill: $socialFill;
-            transition: 0.5s;
+//         svg {
+//             height: 20px;
+//             width: 20px;
+//             fill: $socialFill;
+//             transition: 0.5s;
 
-            // &:hover {
-            //     fill: $teal;
-            // }
-        }
+//             // &:hover {
+//             //     fill: $teal;
+//             // }
+//         }
 
-        #{$basic} & {
-            height: 20px;
-            width: 20px;
-            list-style-type: none;
+//         #{$basic} & {
+//             height: 20px;
+//             width: 20px;
+//             list-style-type: none;
 
-            &:not(:last-of-type) {
-                margin-right: 10px;
-            }
+//             &:not(:last-of-type) {
+//                 margin-right: 10px;
+//             }
 
-            a {
-                display: inline-block;
-            }
+//             a {
+//                 display: inline-block;
+//             }
 
-            img {
-                height: 20px;
-                width: 20px;
-            }
+//             img {
+//                 height: 20px;
+//                 width: 20px;
+//             }
 
-            svg {
-                height: 20px;
-                width: 20px;
-                fill: $white;
-                transition: 0.5s;
+//             svg {
+//                 height: 20px;
+//                 width: 20px;
+//                 fill: $white;
+//                 transition: 0.5s;
 
-                &:hover {
-                    fill: $teal;
-                }
-            }
-        }
-    }
-}
+//                 &:hover {
+//                     fill: $teal;
+//                 }
+//             }
+//         }
+//     }
+// }
