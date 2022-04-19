@@ -22,11 +22,11 @@
         background: $socialBg;
         padding: 10px;
         border-radius: 5px;
-        transition: 0.5s all;
+        transition: background-color 0.5s;
         cursor: pointer;
 
         &:hover {
-            transition: 0.5s all;
+            transition: background-color 0.5s;
             background: $socialBgHover;
 
             svg {
@@ -51,7 +51,7 @@
             height: 20px;
             width: 20px;
             fill: $socialFill;
-            transition: 0.5s all;
+            // transition: 0.5s all;
 
             // &:hover {
             //     fill: $teal;
@@ -80,7 +80,7 @@
                 height: 20px;
                 width: 20px;
                 fill: $white;
-                transition: 0.5s all;
+                // transition: 0.5s all;
 
                 &:hover {
                     fill: $teal;
