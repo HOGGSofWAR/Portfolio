@@ -1,223 +1,223 @@
-// .nav {
-//     $root: &;
-//     $desktop: #{$root}--desktop;
-//     $mobile: #{$root}--mobile;
-//     $hambtn: #{$root}__hamburger-btn;
-//     $hamactive: #{$hambtn}--active;
-//     $active: #{$root}--active;
+.nav {
+    $root: &;
+    $desktop: #{$root}--desktop;
+    $mobile: #{$root}--mobile;
+    $hambtn: #{$root}__hamburger-btn;
+    $hamactive: #{$hambtn}--active;
+    $active: #{$root}--active;
 
-//     background: $primary;
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     width: 100%;
-//     z-index: 10;
-//     padding: 20px 0;
+    background: $primary;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 20px 0;
 
-//     &--desktop {
-//         height: 40px;
+    &--desktop {
+        height: 40px;
 
-//         @media (max-width: 1023px) {
-//             display: none;
-//         }
-//     }
+        @media (max-width: 1023px) {
+            display: none;
+        }
+    }
 
-//     &--mobile {
-//         height: 40px;
+    &--mobile {
+        height: 40px;
         
 
-//         @media (min-width: 1024px) {
-//             display: none;
-//         }
+        @media (min-width: 1024px) {
+            display: none;
+        }
 
-//         .socials {
-//             opacity: 0;
-//         }
+        .socials {
+            opacity: 0;
+        }
 
-//     }
+    }
 
-//     &--active {
+    &--active {
         
-//     }
+    }
 
-//     @include hamburger();
+    @include hamburger();
     
-//     &__container {
+    &__container {
         
-//         display: flex;
-//         justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
         
-//         #{$desktop} & {
-//             align-items: center;
+        #{$desktop} & {
+            align-items: center;
 
-//         }
+        }
 
-//         &--menu-items {
-//             display: block;
-//             background: $primary;
-//             position: absolute;
-//             right: 0;
-//             height: 92vh;
-//             top: 80px;
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: center;
-//             transform: translatex(100%);
-//             transition: transform 0.5s ease-in;
-//             width: 50%;
+        &--menu-items {
+            display: block;
+            background: $primary;
+            position: absolute;
+            right: 0;
+            height: 92vh;
+            top: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transform: translatex(100%);
+            // transition: transform 0.5s ease-in;
+            width: 50%;
 
-//             #{$active} & {
-//                 transform: translatex(0%);
-//             }
-//         }
+            #{$active} & {
+                transform: translatex(0%);
+            }
+        }
 
-//     }
+    }
 
-//     &__menu-items {
-//         padding-left: 0;
-//         list-style-type: none;
+    &__menu-items {
+        padding-left: 0;
+        list-style-type: none;
         
-//         #{$desktop} & {
-//             display: flex;
-//             width: 50%;
-//             max-width: 400px;
-//             justify-content: space-between;
+        #{$desktop} & {
+            display: flex;
+            width: 50%;
+            max-width: 400px;
+            justify-content: space-between;
 
-//         }
+        }
 
-//         #{$mobile} & {
-//             margin-bottom: 50px;
-//         }
+        #{$mobile} & {
+            margin-bottom: 50px;
+        }
 
-//         li, ul {
-//             #{$mobile} & {
-//                 opacity: 0;
-//             }
-//         }
-//     }
+        li, ul {
+            #{$mobile} & {
+                opacity: 0;
+            }
+        }
+    }
 
-//     &__menu-item {
-//         list-style-type: none;
+    &__menu-item {
+        list-style-type: none;
 
-//         &-has-children {
-//             position: relative;
+        &-has-children {
+            position: relative;
 
-//             &:hover {
-//                 .nav__sub-menu {
-//                     #{$desktop} & {
-//                         height: auto;
-//                     }
-//                 }
-//             }
+            &:hover {
+                .nav__sub-menu {
+                    #{$desktop} & {
+                        height: auto;
+                    }
+                }
+            }
 
-//         }
+        }
 
-//         #{$mobile} & {
-//             margin-bottom: 20px;
-//         }
+        #{$mobile} & {
+            margin-bottom: 20px;
+        }
 
-//     }
+    }
 
-//     &__menu-item,
-//     &__menu-item-has-children {
+    &__menu-item,
+    &__menu-item-has-children {
 
-//         #{$desktop} & {
-//             padding: 10px;
-//         }
+        #{$desktop} & {
+            padding: 10px;
+        }
 
-//         a {
-//             @include nav();
+        a {
+            @include nav();
 
             
-//         }
+        }
 
-//         p {
-//             @include nav();
-//             cursor: default;
+        p {
+            @include nav();
+            cursor: default;
 
-//             &:hover {
-//                 color: $white;
-//             }
-//         }
+            &:hover {
+                color: $white;
+            }
+        }
 
-//         #{$mobile} & {
-//             p {
-//                 margin-bottom: 20px;
-//             }
-//         }
-//     }
+        #{$mobile} & {
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
 
-//     &__menu-item-has-children {
-//         // pointer-events: none;
-//     }
+    &__menu-item-has-children {
+        // pointer-events: none;
+    }
 
-//     &__mobile {
-//         &--open {
-//             height: 100vh;
-//             background: $pink;
-//         }
-//     }
+    &__mobile {
+        &--open {
+            height: 100vh;
+            background: $pink;
+        }
+    }
 
-//     &__sub-menu {
+    &__sub-menu {
         
-//         #{$desktop} & {
-//             height: 0;
-//             transition: 0.5s;
-//             overflow: hidden;
-//             position: absolute;
-//             width: 200px;
-//             top: 31px;
-//             left: -10px;
-//             padding-left: 0;
-//             background: $primary;
-//             padding-top: 10px;
+        #{$desktop} & {
+            height: 0;
+            // transition: 0.5s;
+            overflow: hidden;
+            position: absolute;
+            width: 200px;
+            top: 31px;
+            left: -10px;
+            padding-left: 0;
+            background: $primary;
+            padding-top: 10px;
 
-//             .nav__menu-item {
-//                 //margin-bottom: 10px;
-//                 padding: 10px 20px;
+            .nav__menu-item {
+                //margin-bottom: 10px;
+                padding: 10px 20px;
     
     
-//             }
-//         }
+            }
+        }
 
-//         #{$mobile} & {
-//             padding-left: 0;
+        #{$mobile} & {
+            padding-left: 0;
 
-//             .nav__menu-item {
-//                 padding: 0 0 0 20px;
-//             }
-//         }
+            .nav__menu-item {
+                padding: 0 0 0 20px;
+            }
+        }
 
         
 
-//     }
+    }
 
-//     &__hamburger-btn {
+    &__hamburger-btn {
 
-//         &--active {
-//             // .nav__container--menu-items {
-//             //     display: block;
-//             // }
+        &--active {
+            // .nav__container--menu-items {
+            //     display: block;
+            // }
 
-//             // .nav--mobile {
-//             //     height: 100vh;
-//             // }
-//         }
-//     }
+            // .nav--mobile {
+            //     height: 100vh;
+            // }
+        }
+    }
 
-//     &__hamburger {
+    &__hamburger {
 
-//     }
-// }
+    }
+}
 
-// @keyframes navLinkFade {
-//     from {
-//         opacity: 0;
-//         transform: translateX(50px);
-//     }
-//     to {
-//         opacity: 1;
-//         transform: translateX(0px);
-//     }
-// }
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
