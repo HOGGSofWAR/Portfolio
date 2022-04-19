@@ -1,15 +1,15 @@
 // document.querySelectorAll('a').forEach(link => {
-//     if (!link.hash) return;
+    if (!link.hash) return;
 
-//     link.addEventListener('click', (e) => {
-//         e.preventDefault();
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
 
-//         const element = document.querySelector(link.hash);
-//         const position = element.getBoundingClientRect().top - 100;
-//         window.scrollTo({top: position});
-//     })
-// });
-const accordion = document.getElementsByClassName('accordion__box');
+        const element = document.querySelector(link.hash);
+        const position = element.getBoundingClientRect().top - 100;
+        window.scrollTo({top: position});
+    })
+});
+// const accordion = document.getElementsByClassName('accordion__box');
 
 console.log(accordion);
 
@@ -19,7 +19,7 @@ for (i = 0; i<accordion.length; i++ ){
         this.classList.toggle('accordion__box--active')
     })
 };
-const yItemOffset = 70;
+// const yItemOffset = 70;
 const xItemOffset = 70;
 
 const yPercentOffset = 54;
@@ -98,7 +98,7 @@ updateOrientation();
 window.addEventListener('resize', updateOrientation);
 
 });
-const navBtn = document.querySelector('.nav__hamburger-btn');
+// const navBtn = document.querySelector('.nav__hamburger-btn');
 
 let navOpen = false;
 
@@ -111,7 +111,7 @@ navBtn.addEventListener('click', () => {
         navOpen = false;
     }
 });
-const navSlide = ()=>{
+// const navSlide = ()=>{
     const burger = document.querySelector('.nav__hamburger-btn');
     const nav = document.querySelector('.nav--mobile');
     const navLinks = nav.querySelectorAll('.nav__menu-items li, .socials, .nav__menu-item-has-children, .nav__sub-menu');
@@ -135,5 +135,3 @@ const navSlide = ()=>{
 }
 
 navSlide();;
-
-console.log('main js');
