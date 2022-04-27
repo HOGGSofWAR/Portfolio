@@ -27,6 +27,7 @@
 
         &:hover {
             transition: background-color 0.5s;
+            transition: fill 0.5s;
             background: $socialBgHover;
 
             svg {
@@ -51,7 +52,7 @@
             height: 20px;
             width: 20px;
             fill: $socialFill;
-            // transition: 0.5s all;
+            transition: fill 0.5s;
 
             // &:hover {
             //     fill: $teal;
@@ -80,7 +81,7 @@
                 height: 20px;
                 width: 20px;
                 fill: $white;
-                // transition: 0.5s all;
+                transition: fill 0.5s;
 
                 &:hover {
                     fill: $teal;
